@@ -34,7 +34,7 @@ function playStream(idVideo,stream){
 openStream()
 .then(stream =>playStream('localStream',stream));
 */
-const  peer = new Peer();
+const  peer = new Peer({host:'https://call-demo1.herokuapp.com/', port: 443, secure: true});
 peer.on('open', id =>{
     $('#my-peer').append(id);
     $('#btnSignUp').click(()=>{
