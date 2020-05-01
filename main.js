@@ -1,6 +1,7 @@
 $('#div-chat').hide();
 
 const socket =io('https://stream105.herokuapp.com/');
+$('#div-chat').hide();
 socket.on('DANH_SACH_ONLINE',userInfo =>{
     $('#div-chat').show();
     $('#div-dangKy').hide();
@@ -34,7 +35,7 @@ function playStream(idVideo,stream){
 openStream()
 .then(stream =>playStream('localStream',stream));
 */
-const  peer = new Peer({host:'call-demo1.herokuapp.com/'});
+const  peer = new Peer();
 peer.on('open', id =>{
     $('#my-peer').append(id);
     $('#btnSignUp').click(()=>{
