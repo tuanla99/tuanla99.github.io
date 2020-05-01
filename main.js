@@ -34,7 +34,7 @@ function playStream(idVideo,stream){
 openStream()
 .then(stream =>playStream('localStream',stream));
 */
-const  peer = new Peer({host:'https://9000-f539e21b-d561-41d5-a4be-3fd97292bc91.ws-us02.gitpod.io/',secure:true, port:443});
+const  peer = new Peer({host:'https://9000-f539e21b-d561-41d5-a4be-3fd97292bc91.ws-us02.gitpod.io',secure:true, port:443});
 peer.on('open', id =>{
     $('#my-peer').append(id);
     $('#btnSignUp').click(()=>{
